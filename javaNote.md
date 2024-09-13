@@ -25,3 +25,15 @@
                         
 原文链接：https://blog.csdn.net/u011441473/article/details/117768743
 
+# 数据溢出问题
+  当涉及到同类型数据相加减可能会发生溢出，此时再与同类型数据比较会导致判断结果与实际情况不符。
+  如 int a = 2147483647;
+    int b = 1;
+    int c = 1;
+    if( a + b > c)
+      cout << "a + b > c" << endl;
+    else
+      cout << "a + b < c" << endl;
+  结果输出 a + b < c;
+  因为发生数据溢出
+
